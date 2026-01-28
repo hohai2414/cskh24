@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Background is set in CSS or via an img tag behind everything -->
+        <div class="background-overlay"></div>
+
+        <div class="header">
+            <div class="logo">TOPSKILLS</div>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Side: Character and Slots -->
+            <div class="left-panel">
+                <div class="character-container">
+                    <!-- Placeholder for character, user can replace source if needed -->
+                    <img src="./assets/character.png" alt="Agent" class="character-img" id="character-img">
+                </div>
+                
+                <div class="slots-container">
+                    <div class="slot" data-step="1"></div>
+                    <div class="slot" data-step="2"></div>
+                    <div class="slot" data-step="3"></div>
+                    <div class="slot" data-step="4"></div>
+                    <div class="slot" data-step="5"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: Draggable Options -->
+            <div class="right-panel">
+                <div class="options-grid">
+                    <div class="draggable-item" draggable="true" id="opt-1" data-id="4">XỬ LÝ TỪ CHỐI</div>
+                    <div class="draggable-item" draggable="true" id="opt-2" data-id="1">TÌM KIẾM DATA<br>KHÁCH HÀNG</div>
+                    <div class="draggable-item" draggable="true" id="opt-3" data-id="3">GIỚI THIỆU SẢN PHẨM</div>
+                    <div class="draggable-item" draggable="true" id="opt-4" data-id="1-alt">TÌM KIẾM KHÁCH HÀNG<br>TIỀM NĂNG</div>
+                    <div class="draggable-item" draggable="true" id="opt-5" data-id="2">HẸN GẶP KHÁCH HÀNG</div>
+                    <div class="draggable-item" draggable="true" id="opt-6" data-id="2-alt">KẾT NỐI KHÁCH HÀNG</div>
+                    <div class="draggable-item" draggable="true" id="opt-7" data-id="5">CHỐT HỢP ĐỒNG</div>
+                    <div class="draggable-item" draggable="true" id="opt-8" data-id="3-alt">TƯ VẤN SẢN PHẨM</div>
+                    <div class="draggable-item" draggable="true" id="opt-9" data-id="6">CHĂM SÓC<br>SAU BÁN HÀNG</div>
+                    <div class="draggable-item" draggable="true" id="opt-10" data-id="6-alt">HẬU MÃI</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="timer-container">
+                <div class="timer-box">
+                    <span id="timer">05 : 00</span>
+                </div>
+            </div>
+            <button class="submit-btn" id="submit-btn">HOÀN THÀNH</button>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Kết Quả</h2>
+            <p id="modal-message"></p>
+            <button id="restart-btn">Chơi Lại</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
